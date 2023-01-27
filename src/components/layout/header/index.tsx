@@ -1,5 +1,7 @@
 import { useContext } from "react";
-import { useGetIdentity } from "@pankod/refine-core";
+import {
+  useGetIdentity,
+} from "@pankod/refine-core";
 import {
   AntdLayout,
   Space,
@@ -24,6 +26,7 @@ export const Header: React.FC = () => {
         padding: "0px 24px",
         height: "64px",
       }}
+      className="print:hidden"
     >
       <Switch
         checkedChildren="🌛"
@@ -32,13 +35,9 @@ export const Header: React.FC = () => {
         defaultChecked={mode === "dark"}
       />
       <Space style={{ marginLeft: "8px" }}>
-        {user?.name && (
-          <Text ellipsis strong>
-            {user.name}
-          </Text>
-        )}
-        {user?.avatar && <Avatar src={user?.avatar} alt={user?.name} />}
+        {user?.user_metadata?.avatar_url && <Avatar src={user?.user_metadata?.avatar_url} alt={user?.user_metadata?.full_name} />}
       </Space>
     </AntdLayout.Header>
   );
 };
+

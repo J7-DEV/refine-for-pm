@@ -177,6 +177,7 @@ export const Sider: typeof DefaultSider = ({ render }) => {
             padding: 0,
           }}
           maskClosable={true}
+          className="print:hidden"
         >
           <AntdLayout>
             <AntdLayout.Sider style={{ height: "100vh", overflow: "hidden" }}>

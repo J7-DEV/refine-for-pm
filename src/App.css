@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  white-space: pre-line;
+}
+
+.table,
+.tr {
+  width: 100%;
+}
+.tr {
+  display: flex;
+}
+.th,
+.td {
+  padding: 0.5rem;
+}
+.tr,
+.table-main .tfoot .tr .th,
+.table-main .tfoot .tr .td:last-child {
+  border-bottom: 2px solid #eee;
+}
+.th {
+  color: #555 !important;
+  font-weight: 300 !important;
+  background-color: #fafafa !important;
+  text-align: right;
+  width: 8rem;
+}
+
+.table_td-flex-1 .td {
+  flex: 1;
+}
+.table p {
+  margin-bottom: 0px;
+}

@@ -1,0 +1,109 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 10mm 0mm 10mm 20mm;
+  }
+  html,
+  body {
+    height: 100vh; /* Use 100% here to support printing more than a single page*/
+    margin: 0 !important;
+    padding: 0 !important;
+    /* overflow: hidden; */
+    width: 210mm;
+    height: 297mm;
+    font-size: 12px;
+  }
+  .table-main .tr div:nth-child(3) {
+    font-size: 10px !important;
+  }
+  .print {
+    margin: 0;
+    border: initial;
+    border-radius: initial;
+    width: initial;
+    min-height: initial;
+    box-shadow: initial;
+    background: initial;
+    page-break-after: always;
+  }
+  .print,
+  .table,
+  .tr {
+    width: 210mm;
+  }
+}
+
+/*---*/
+
+.table-main .th {
+  text-align: center;
+}
+.table-main .tr div.td:first-child {
+  width: 3rem;
+  text-align: center;
+}
+
+.table-main .tr div.td:nth-child(2) {
+  width: 12rem;
+  flex: 2;
+}
+.table-main .tr div:nth-child(3) {
+  font-size: 0.75rem;
+  flex: 3;
+}
+.table-main .tr div.td:nth-child(4),
+.table-main .tr div.td:nth-child(4) {
+  text-align: right;
+  padding-right: 0rem;
+  min-width: 6rem;
+  flex: 1;
+}
+.table-main .tr div.td:nth-child(5),
+.table-main .tr div.td:nth-child(5) {
+  text-align: left;
+  padding-left: 0rem;
+  min-width: 4rem;
+  flex: 1;
+}
+.table-main .tr div.td:nth-child(5) {
+  min-width: 3rem;
+  flex: 1;
+}
+.table-main .tr div.td:nth-child(6),
+.table-main .tr div.td:nth-child(6) {
+  text-align: center;
+  width: 8rem;
+}
+.table-main .tr div.td:last-child,
+.table-main .tr div.td:last-child {
+  text-align: right;
+  width: 6rem;
+}
+
+.table-main .tfoot .tr {
+  border-bottom: none;
+}
+
+.table-main .tfoot .tr .th {
+  text-align: right;
+  width: 8rem;
+}
+
+/*---*/
+
+.table-meta tr th {
+  width: 4rem;
+}
+.table-meta tr th,
+.table-meta tr td {
+  vertical-align: top;
+}
+
+/*---*/
+
+.table-contact tr th {
+  width: 8rem;
+}
+.table-contact tr td {
+  width: calc(50% - 8rem);
+}
